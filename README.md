@@ -1,8 +1,8 @@
-# Request Proxy Service
+# shopper cart service
 
 The System has be been built using Spring boot framework, with an exposed endpoint/REST API  
-* host/api/v1/reply, where host is the server where the system has been deployed or running, v1 is for the versioning of the API
-* for local testing or postman testing : use localhost:8090/api/v1/reply 
+* host/api/v1/cart, where host is the server where the system has been deployed or running, v1 is for the versioning of the API
+* for local testing or postman testing : use localhost:8090/api/v1/cart 
 
 ## Requirements
 
@@ -12,23 +12,14 @@ The System has be been built using Spring boot framework, with an exposed endpoi
 ## How to run it?
 Do :> gradle bootRun
 
-## For running unit test and integration test
-
-Do:> gradle test
-
-## For running unit test and integration test with additional information
-
-Do:> gradle test -info or gradle test -i
-
 ## Improvement to be covered
 
-* More Error handling can be done around the URL execution
+due to limit time this system is developed in 2hrs max
 
-* More Integration test can be covered under failure cases like, request limit exceeds, 
-  connection refused, server not found.
+for relational db design check /src/main/resources/initial.sql
 
-* For Recording client activities making request to the service distributed caching can used, 
-  currently a simple TransactionService has been created to do the same.  
+current system is running over the key value pair of [User, List<ShoppingCartItem>]
+
   
   
   
